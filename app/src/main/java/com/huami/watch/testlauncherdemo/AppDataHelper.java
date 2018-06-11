@@ -109,8 +109,14 @@ public class AppDataHelper {
 
 
     /**
-     *
-
+     *  load 所有的app
      */
+    public List<ResolveInfo> loadApps(Context mContext) {
+        Intent mainIntent = new Intent(Intent.ACTION_MAIN, null);
+        mainIntent.addCategory(Intent.CATEGORY_LAUNCHER);
+
+        List<ResolveInfo> mApps = mContext.getPackageManager().queryIntentActivities(mainIntent, 0);
+        return mApps;
+    }
 
 }

@@ -5,22 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-    <Button
-
-        android:id="@+id/btn_test_get_apps"
+    <GridView
+        android:id="@+id/apps_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="GetAppList"
-        />
-
-
-    <View
-        android:id="@+id/hide_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/colorAccent"
-        android:visibility="gone"
-        />
-
+        android:numColumns="4" />
 </LinearLayout>
