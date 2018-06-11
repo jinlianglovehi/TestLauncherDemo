@@ -4,6 +4,7 @@ import android.content.pm.ResolveInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 
 import java.util.List;
@@ -29,8 +30,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void testGetAPPData(){
-
-
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -39,11 +38,18 @@ public class MainActivity extends AppCompatActivity {
 
                 Log.i(TAG,"listSize:"+list.size());
 
-
             }
         }).start();
 
+    }
 
 
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        // 获取的是滑动的位置
+        Log.i(TAG,"") ;
+        event.getX() ;
+        event.getY();
+        return super.onTouchEvent(event);
     }
 }
